@@ -1,0 +1,63 @@
+<%= include('includes/top.tmpl') %>
+
+    <div class="main">
+        <div class="midterms-widget">
+            <div class="midterms-widget__title">
+                <h1><%= us_election_results %></h1>
+            </div>
+            <div class="midterms-widget__subtitle">
+                <h2><%= senate %></h2>
+            </div>
+            <div class="midterms-widget__senate-results">
+                <div class="midterms-widget__senate-results__info">
+                    <p><%= how_many_seats %></p>
+                    <div class="crat-title col"><%= democrat %></div>
+                    <div class="maj-title col"><%= majority %></div>
+                    <div class="gop-title col"><%= republican %></div>
+                    <span class="clear"></span>
+                </div>
+
+                <div class="majority-line"></div>
+
+                <span class="midterms-widget__senate-results__crats">32</span>
+                <span class="midterms-widget__senate-results__gop">32</span>
+                <span class="clear"></span>
+
+                <div class="midterms-widget__senate-results__chart">
+                    <!-- Crats uncontested (uc) / includes 2 independents (34) -->
+                    <div class="crat-uc"></div>
+                    <!-- Contested (c) seats (36) -->
+                    <div class="crat-c"></div>
+                    <div class="pending"></div>
+                    <div class="gop-c"></div>
+                    <!-- GOP uncontested (uc) (32) -->
+                    <div class="gop-uc"></div>
+                    <span class="clear"></span>
+                </div>
+
+                <div class="midterms-widget__senate-results__chart-legend">
+                    <div class="crats"></div>
+                    <div class="gop"></div>
+                </div>
+                <span class="midterms-widget__senate-results__chart-legend-txt"><%= not_contested %></span>
+                <span class="midterms-widget__senate-results__independent"></span>
+                <span class="clear"></span>
+                <p><%= includes_idependants %></p>
+            </div>
+            <div class="midterms-widget__subtitle">
+                <h2><%= house %></h2>
+            </div>
+            <div class="midterms-widget__house-results">
+                <p><%= all_seats %></p>
+                <span class="midterms-widget__house-results__crats">0</span>
+                <span class="midterms-widget__house-results__gop">0</span>
+                <span class="midterms-widget__house-results__independent"></span>
+                <span class="clear"></span>
+            </div>
+            <div class="midterms-widget__footer">
+                <a href="http://www.bbc.co.uk/news/world-us-canada-29879340"><%= elections_in_full %></a>
+            </div>
+        </div>
+    </div>
+
+<%= include('includes/bottom.tmpl') %>

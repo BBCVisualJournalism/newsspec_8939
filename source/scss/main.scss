@@ -1,0 +1,169 @@
+@import "news_special/defaults";
+@import "app";
+
+/* Overwrite padding */
+.onbbcdomain .main {
+    padding: 0;
+}
+
+.midterms-widget {
+	font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+	color: #4F4F4F;
+
+	p {
+		margin: 10px 0 10px 0;
+	}
+
+	/* Title */
+	.midterms-widget__title h1 {
+		margin: 0;
+		font-size: 150%;
+	}
+
+	.midterms-widget__title {
+		background-color: #B9B9B9;
+		padding: 5px;
+	}
+
+	/* Subtitle */
+	.midterms-widget__subtitle {
+		background-color: #DFDFDF;
+		padding: 5px;
+		margin: 2px 0 0 0;
+	}
+
+	.midterms-widget__subtitle h2 {
+		margin: 0;
+		font-weight: normal;
+		font-size: 110%;
+	}
+
+	/* Senate Results */
+	.midterms-widget__senate-results {
+		.midterms-widget__senate-results__info {
+			margin: 5px 0 5px 0;
+			.col {
+				float: left;
+				width:33.333%;
+			}
+			.crat-title {
+				text-align: left;
+				font-weight: bold;
+				color: #1C3054;
+			}
+			.maj-title {
+				text-align: center;
+			}
+			.gop-title {
+				text-align: right;
+				font-weight: bold;
+				color: #AC1315;
+			}
+		}
+
+		.majority-line {
+			border-left: 2px dotted black;
+			height: 79px;
+			position: absolute;
+			left: 50%;
+			z-index: 1;
+			background-color: white;
+		}
+
+		.midterms-widget__senate-results__crats {
+			font-size: 200%;
+			font-weight: bold;
+			color: #1C3054;
+			float: left;
+		}
+		.midterms-widget__senate-results__gop {
+			font-size: 200%;
+			font-weight: bold;
+			color: #AC1315;
+			float: right;
+		}
+
+		.midterms-widget__senate-results__chart {
+			margin: 10px 0 20px 0;
+			height: 2em;
+			width: 100%;
+			.crat-uc {width:34%; float:left; background: #7A8DA2; height:100%;}
+			.crat-c {width:0; float:left; background: #1C3054; height:100%;}
+			.pending {width:36%; float:left; background: #FFF; height:100%;}
+			.gop-c {width:0; float:left; background: #AC1315; height:100%;}
+			.gop-uc {width:30%; float:left; background: #CC696A; height:100%;}
+		}
+
+		.midterms-widget__senate-results__chart-legend {
+			float: left;
+			height: 15px;
+			margin: 0 7px 7px 0;
+			.crats {float:left;width: 15px; margin:0 7px 0 0; background: #7A8DA2; height:100%;}
+			.gop {float:left;width: 15px; margin:0 0 0 0; background: #CC696A; height:100%;}
+		}
+		.midterms-widget__senate-results__chart-legend-txt {
+			float: left;
+		}
+		.midterms-widget__senate-results__independent {
+			float: right;
+			font-weight: bold;
+		}
+	}
+
+	/* House Results */
+	.midterms-widget__house-results {
+		padding: 0 0 10px 0;
+
+		.midterms-widget__house-results__crats {
+			font-size: 200%;
+			font-weight: bold;
+			color: #1C3054;
+			float: left;
+		}
+
+		.midterms-widget__house-results__gop {
+			font-size: 200%;
+			font-weight: bold;
+			color: #AC1315;
+			float: right;
+		}
+
+		.midterms-widget__house-results__independent {
+			clear: both;
+			float: right;
+			font-weight: bold;
+		}
+	}
+
+	/* FOOTER */
+	.midterms-widget__footer {
+		clear: both;
+		padding: 15px 0 15px 0;
+		border-top: 1px solid #DFDFDF;
+		border-bottom: 1px solid #4F4F4F;
+	}
+
+	a {
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	/* unvisited link */
+	a:link {
+	    color: #1C3054;
+	}
+	/* visited link */
+	a:visited {
+	    color: #1C3054;
+	}
+	/* mouse over link */
+	a:hover {
+	    color: #1C3054;
+	}
+	/* selected link */
+	a:active {
+	    color: #1C3054;
+	}
+
+	.clear { clear: left; display: block; }
+}
