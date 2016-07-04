@@ -5,7 +5,7 @@ define(['lib/news_special/bootstrap', 'lib/news_special/share_tools/controller',
             news.pubsub.emit('istats', ['app-initiated', 'newsspec-nonuser', true]);
             news.sendMessageToremoveLoadingImage();
 
-            require(['http://www.bbc.co.uk/indepthtoolkit/data_set/us-midterms-2014?callback=define'],
+            require(['http://www.stage.bbc.co.uk/indepthtoolkit/data-sets/us_midterms_2014/jsonp'],
                 function (data) {
                     var error,
                         validationObj,
