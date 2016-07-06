@@ -74,19 +74,9 @@ define(['jquery'], function ($) {
             hostCommunicator.hostPageCallback = callback.toString();
         },
         sendMessageToremoveLoadingImage: function () {
-            var message,
-                funcToExecute,
-                iframeUID = this.getValueFromQueryString('iframeUID');
-
-            funcToExecute = 'function () {' +
-                'var iframeDivContainer = document.getElementById("' + iframeUID + '--bbc-news-visual-journalism-loading-spinner");' +
-                'if (iframeDivContainer) {' +
-                '    iframeDivContainer.parentNode.removeChild(iframeDivContainer);' +
-                '}' +
-            '}';
-
-            message = {
-                'hostPageCallback' : funcToExecute
+            var message = {
+                msg: 'removeLoadingSpinner',
+                iframeUid: this.getValueFromQueryString('iframeUID')
             };
 
             if (this.postMessageAvailable) {
