@@ -19,7 +19,7 @@ module.exports = function (grunt) {
             dest:   'content/<%= config.services.default %>/js/lib/vendors/'
         }]
     });
-    
+
     grunt.config(['copy', 'jsAll'], {
         files: [{
             expand: true,
@@ -45,15 +45,15 @@ module.exports = function (grunt) {
 
     grunt.registerTask('copyRequiredJs', function () {
         if (grunt.config.get('config').debug === 'true') {
-            grunt.task.run('copy:jsAll'); 
-            grunt.task.run('uglify'); 
+            grunt.task.run('copy:jsAll');
+            grunt.task.run('uglify');
         } else {
-            grunt.task.run('copy_js_minimum'); 
+            grunt.task.run('copy_js_minimum');
         }
     });
 
     grunt.config(['concurrent', 'js'], {
-        tasks: ['jshint', 'jasmine', 'requirejs:jquery1', 'requirejs:jquery2']
+        tasks: ['jshint', 'requirejs:jquery1', 'requirejs:jquery2']
     });
     grunt.registerTask('js', ['clean:allJs', 'overrideImagerImageSizes', 'concurrent:js', 'copyRequiredJs']);
 };
